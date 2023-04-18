@@ -1,6 +1,7 @@
 package ru.ivanovds;
 
 import ru.ivanovds.models.BottleOfWater;
+import ru.ivanovds.models.HotDrink;
 import ru.ivanovds.models.Product;
 import ru.ivanovds.repositories.VendingMachine;
 
@@ -17,6 +18,9 @@ public class Main {
         machine.addProduct(new Product("Snake", 40.0d));
         machine.addProduct(new BottleOfWater("Milk", 60.0d, 100));
         machine.addProduct(new BottleOfWater("Water", 20.0d, 100));
+
+        machine.addProduct(new HotDrink("Americano Coffee", 100.0d, 100, 92));
+        machine.addProduct(new HotDrink("Latte Coffee", 150.0d, 80, 85));
 
         System.out.println(product);
 
