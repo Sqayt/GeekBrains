@@ -1,13 +1,43 @@
 package Classes;
 
-public class OrdinaryClient extends Actor {
+public class PromotionClient extends Actor {
+
+    /**
+     * Имя скидки
+     */
+    private final String namePromotion;
+
+    /**
+     * Размер скидки
+     */
+    public static int promotion;
 
     /**
      * Конструктор
-     * @param name Имя Человека
+     * @param name Имя человека
+     * @param namePromotion Название скидки
+     * @param promotion Скидка
      */
-    public OrdinaryClient(String name) {
+    public PromotionClient(String name, String namePromotion, int promotion) {
         super(name);
+        this.namePromotion = namePromotion;
+        this.promotion = promotion;
+    }
+
+    /**
+     * Getter
+     * @return вернуть имя скидки
+     */
+    public String getNamePromotion() {
+        return namePromotion;
+    }
+
+    /**
+     * Геттер на скидку
+     * @return получить скидку
+     */
+    public int getPromotion() {
+        return promotion;
     }
 
     /**
@@ -35,7 +65,6 @@ public class OrdinaryClient extends Actor {
     @Override
     public void setTakeOrder(boolean pickUpOrder) {
         super.isTakeOrder = pickUpOrder;
-
     }
 
     /**
@@ -80,6 +109,6 @@ public class OrdinaryClient extends Actor {
      */
     @Override
     public boolean isReturn() {
-        return super.isReturnOrder;
+        return isReturnOrder;
     }
 }

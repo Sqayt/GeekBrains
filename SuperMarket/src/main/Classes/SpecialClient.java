@@ -1,13 +1,20 @@
 package Classes;
 
-public class OrdinaryClient extends Actor {
+public class SpecialClient extends Actor {
+
+    /**
+     * Целочисленная переменная, указывающий скидку
+     */
+    private int idVip;
 
     /**
      * Конструктор
-     * @param name Имя Человека
+     * @param name Имя человека
+     * @param idVip Скидка
      */
-    public OrdinaryClient(String name) {
+    public SpecialClient(String name, int idVip) {
         super(name);
+        this.idVip = idVip;
     }
 
     /**
@@ -17,6 +24,14 @@ public class OrdinaryClient extends Actor {
     @Override
     public String getName() {
         return super.name;
+    }
+
+    /**
+     * Геттер на скидку
+     * @return получить скидку
+     */
+    public int getIdVip() {
+        return idVip;
     }
 
     /**
@@ -80,6 +95,6 @@ public class OrdinaryClient extends Actor {
      */
     @Override
     public boolean isReturn() {
-        return super.isReturnOrder;
+        return isReturnOrder;
     }
 }
